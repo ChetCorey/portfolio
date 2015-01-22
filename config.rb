@@ -70,3 +70,10 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+Github.configure do |c|
+  c.basic_auth = "login:password"
+  c.adapter    = :typheous
+  c.user       = 'peter-murach'
+  c.repo       = 'finite_machine'
+end
