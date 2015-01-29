@@ -1,11 +1,14 @@
-hello
-<div class="project one-edge-shadow">
-  gdi
-</div>
-<% @projects.each do %>
-<a style="display:block" href="https://github.com/ChetCorey/blackjack_game">
-  <div class="project hvr-grow-shadow"></div>
-</a>
-<a style="display:block" href="https://github.com/ChetCorey/blackjack_game">
-  <div class="project hvr-grow-shadow"></div>
-</a>
+<%
+  @blackjack   = "https://github.com/ChetCorey/blackjack_game"
+  @freeshelf   = "https://github.com/ChetCorey/freeshelf"
+  @gdi         = "https://github.com/girldevelopit/gdi-new-site"
+  @questionbox = "https://github.com/ChetCorey/question_box"
+
+  @projects = [@blackjack, @freeshelf, @gdi, @questionbox]
+%>
+
+<% @projects.each do |i|%>
+  <a style="display:block" href="<%=i%>">
+    <div class="project hvr-grow-shadow"></div>
+  </a>
+<% end %>
